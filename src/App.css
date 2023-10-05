@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+.App::-webkit-scrollbar {
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  height:300px;
+  width:100vw;
+  /* display:flex;
+  flex-direction: row;
+  justify-content: center; */
+  margin-top: -10vh;
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .header{
+  width:112vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -15vh;
+  height:15%;
+  z-index: 10;
+  min-height: 265px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header .navigation{
+  position:absolute;
+  z-index: 11;
+  left: 50%;
+  transform: translateX(-50%);
+  width:50vw;
+  top: 1%;
+}
+
+footer .footer{
+  width:105vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -45vh;
+  height:450px;
+  z-index: 10;
+}
+
+.App{
+overflow-x: hidden;
+position: relative;
+}
+
+/* footer .leftS{
+  position: absolute;
+  bottom:-35vh;
+  width:40vw;
+  height:39vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+footer .rightS{
+  position: absolute;
+  right:1%;
+  bottom:-35vh;
+  width:40vw;
+  height:39vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+footer div img{
+  height: 100%;
+  width:  43%;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+footer div {
+  height: 88vh;
+  position: absolute;
+  width: 114vw;
+  bottom: -13vh;
+  left: -6%;
+  overflow: hidden;
+}
+
+.star2{
+  right:2vw;
+}
+.star1{
+  left:-1%;
+}
+/* 
+.border{
+  height: 2116px;
+  background-size: cover;
+  margin-top: -5%;
+} */
+
+section .border{
+  width:100vw;
+  height: 100%;
+  position: relative;
+}
+
+
+/* section .presentation{
+  position: absolute;
+  width:80vw;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top:12vh;
+  z-index: 5;
+} */
+
+section div{
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width:70vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top:0;
+}
+
+section div img{
+  width:45vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:15%;
+}
+
+.bird{
+  position: absolute;
+  height:13%;
+  right:-8vw;
+  top:30%;
+}
+
+.snake{
+  position: absolute;
+  height:13%;
+  left:-1vw;
+  top:30%;
+}
+/* section .top{
+  position: absolute;
+  width:27vw;
+  height: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  top:0;
+}
+
+section .left{
+  position: absolute;
+  height: 100vh;
+  width:1%;
+  left: 11.5%;
+  top:34vh
+}
+section .right{
+  position: absolute;
+  height: 100vh;
+  width:1%;
+  right: 11.5%;
+  top:34vh */
+/* } */
+
+/* .top{
+  position: absolute;
+  height:800px;
+  width:23.6vw;
+  left: 49.9%;
+  transform: translateX(-50%);
+  top:127px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #44C0A8;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
 }
