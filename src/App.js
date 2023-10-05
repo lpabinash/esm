@@ -13,6 +13,7 @@ import star2 from "./images/Star2.png"
 import bird from "./images/Bird.png"
 import snake from "./images/Snake.png"
 import navigation from "./images/Navigation.png"
+import bandland2 from "./images/Bandland2.png"
 function App() {
 const bannerimg={
   backgroundImage: `url(${banner})`,
@@ -50,6 +51,9 @@ const bannerimg={
     <img src={star2}  className="star2"/>
   </div>
   <img src={footer} className="footer"/>
+  <img src={bandland2} className="bandland2"/>
+  <img src={navigation} className="navigationFooter"/>
+
 </footer>
     </div>
   );
